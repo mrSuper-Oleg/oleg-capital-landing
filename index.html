@@ -330,6 +330,41 @@ h2 .strike.struck::after{transition:transform .7s cubic-bezier(.7,0,.2,1);transf
   .step-num{font-size:42px}
 }
 
+/* ---------- FORMATS ---------- */
+.formats .sec-intro{max-width:620px}
+.format-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:66px}
+.format{
+  display:flex;flex-direction:column;background:#FBF8F2;
+  border:1px solid rgba(46,49,52,.12);border-top:2px solid var(--gold);
+  padding:42px 34px;transition:transform .4s,box-shadow .4s;
+}
+.format:hover{transform:translateY(-8px);box-shadow:0 26px 50px -26px rgba(17,20,24,.2)}
+.format-eyebrow{
+  display:inline-block;font-size:11px;font-weight:600;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--gold);margin-bottom:16px;
+}
+.format h3{font-family:var(--serif);font-size:27px;font-weight:600;color:var(--ink);line-height:1.1;margin-bottom:12px}
+.format-lead{font-size:15.5px;color:var(--graphite);opacity:.9;margin-bottom:22px}
+.format-list{list-style:none;margin:0 0 24px;padding:20px 0 0;border-top:1px solid rgba(46,49,52,.1)}
+.format-list li{position:relative;padding:0 0 12px 24px;font-size:15px;color:var(--graphite)}
+.format-list li:last-child{padding-bottom:0}
+.format-list li::before{content:'';position:absolute;left:2px;top:8px;width:7px;height:7px;background:var(--gold);transform:rotate(45deg)}
+.format-for{font-size:13px;color:var(--steel);margin:auto 0 22px;padding-top:22px}
+.format-for b{color:var(--ink);font-weight:600}
+.format-cta{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);
+  padding-top:20px;border-top:1px solid rgba(46,49,52,.14);
+}
+.format-cta .arr{color:var(--gold);transition:transform .3s}
+.format:hover .format-cta .arr{transform:translateX(5px)}
+.format-note{
+  margin-top:40px;font-size:14px;color:var(--steel);max-width:620px;
+  border-left:2px solid var(--gold);padding-left:20px;
+}
+.format-note b{color:var(--ink);font-weight:600}
+@media(max-width:900px){.format-cards{grid-template-columns:1fr;max-width:520px}}
+
 /* ---------- FINAL CTA ---------- */
 .final{padding:170px 0;text-align:center;position:relative}
 .final-aphorism{
@@ -372,6 +407,7 @@ footer{border-top:1px solid rgba(46,49,52,.14);padding:44px 0 56px;font-size:14p
       <a href="#istoriya">Обо мне</a>
       <a href="#sistema">Решение</a>
       <a href="#podhod">Как я работаю</a>
+      <a href="#formaty">Форматы</a>
     </div>
     <a class="nav-cta" href="#kontakt">Разбор капитала</a>
   </div>
@@ -570,6 +606,54 @@ footer{border-top:1px solid rgba(46,49,52,.14);padding:44px 0 56px;font-size:14p
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- FORMATS -->
+<section class="formats" id="formaty">
+  <div class="wrap">
+    <div class="sec-label rv">06 — Форматы работы</div>
+    <h2 class="rv">С чего начать.<br><em>Три формата.</em></h2>
+    <p class="sec-intro rv">От разового разбора до постоянного сопровождения. Один продаёт другой: диагностика показывает дыры, стратегия их закрывает, сопровождение держит контур.</p>
+    <div class="format-cards">
+      <article class="format rv">
+        <span class="format-eyebrow">Старт</span>
+        <h3>Диагностика капитала</h3>
+        <p class="format-lead">Разовый разбор. Чтобы увидеть полную картину и понять, где именно вы теряете деньги.</p>
+        <ul class="format-list">
+          <li>Все счета, активы и крипта — в одной карте</li>
+          <li>Где скрытые комиссии, дыры в ликвидности и точки отказа</li>
+          <li>Приоритеты: что чинить в первую очередь</li>
+        </ul>
+        <div class="format-for"><b>Кому:</b> есть капитал, но нет ясности</div>
+        <a class="format-cta" href="#kontakt">Обсудить формат <span class="arr">→</span></a>
+      </article>
+      <article class="format rv">
+        <span class="format-eyebrow">Система</span>
+        <h3>Архитектура капитала</h3>
+        <p class="format-lead">Проектируем вашу финансовую систему: каждому рублю — роль, каждому риску — ответ.</p>
+        <ul class="format-list">
+          <li>Три слоя: защита, опора, энергия</li>
+          <li>Юрисдикции, налоги (ИИС, ЛДВ), ликвидность</li>
+          <li>Правила действий: что делаете в шторм, а чего — никогда</li>
+        </ul>
+        <div class="format-for"><b>Кому:</b> пора собрать хаос в управляемую структуру</div>
+        <a class="format-cta" href="#kontakt">Обсудить формат <span class="arr">→</span></a>
+      </article>
+      <article class="format rv">
+        <span class="format-eyebrow">Fix-only</span>
+        <h3>Сопровождение</h3>
+        <p class="format-lead">Система живёт и адаптируется. Я рядом — без процента от ваших сделок.</p>
+        <ul class="format-list">
+          <li>Ребалансировка и контроль рисков</li>
+          <li>Спокойные решения вместо паники в кризис</li>
+          <li>Прямой доступ ко мне по вашим вопросам</li>
+        </ul>
+        <div class="format-for"><b>Кому:</b> система собрана — нужно, чтобы она работала</div>
+        <a class="format-cta" href="#kontakt">Обсудить формат <span class="arr">→</span></a>
+      </article>
+    </div>
+    <p class="format-note rv"><b>Стоимость — fix-only:</b> фиксированная сумма, без процента от сделок и скрытых комиссий. Зависит от объёма капитала и формата, обсуждается лично до старта. Никаких «иксов» и обещаний доходности.</p>
   </div>
 </section>
 
